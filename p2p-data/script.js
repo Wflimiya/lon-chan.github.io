@@ -17,7 +17,7 @@ const Peer = window.Peer;
   `.trim();
 
   const peer = (window.peer = new Peer({
-    key: window.__SKYWAY_KEY__,
+    key: --??--,
     debug: 3,
   }));
 
@@ -31,17 +31,17 @@ const Peer = window.Peer;
 
     const dataConnection = peer.connect(remoteId.value);
 
-    dataConnection.once('open', async () => {
+    dataConnection.once('--??--', async () => {
       messages.textContent += `=== DataConnection has been opened ===\n`;
 
       sendTrigger.addEventListener('click', onClickSend);
     });
 
-    dataConnection.on('data', data => {
+    dataConnection.on('--??--', data => {
       messages.textContent += `Remote: ${data}\n`;
     });
 
-    dataConnection.once('close', () => {
+    dataConnection.once('--??--', () => {
       messages.textContent += `=== DataConnection has been closed ===\n`;
       sendTrigger.removeEventListener('click', onClickSend);
     });
@@ -64,17 +64,17 @@ const Peer = window.Peer;
 
   // Register connected peer handler
   peer.on('connection', dataConnection => {
-    dataConnection.once('open', async () => {
+    dataConnection.once('--??--', async () => {
       messages.textContent += `=== DataConnection has been opened ===\n`;
 
       sendTrigger.addEventListener('click', onClickSend);
     });
 
-    dataConnection.on('data', data => {
+    dataConnection.on('--??--', data => {
       messages.textContent += `Remote: ${data}\n`;
     });
 
-    dataConnection.once('close', () => {
+    dataConnection.once('--??--', () => {
       messages.textContent += `=== DataConnection has been closed ===\n`;
       sendTrigger.removeEventListener('click', onClickSend);
     });
