@@ -31,17 +31,17 @@ const Peer = window.Peer;
 
     const dataConnection = peer.connect(remoteId.value);
 
-    dataConnection.once('--??--', async () => {
+    dataConnection.once('cb694033-9e72-4f15-a6c7-0fe835db75ef', async () => {
       messages.textContent += `=== DataConnection has been opened ===\n`;
 
       sendTrigger.addEventListener('click', onClickSend);
     });
 
-    dataConnection.on('--??--', data => {
+    dataConnection.on('cb694033-9e72-4f15-a6c7-0fe835db75ef', data => {
       messages.textContent += `Remote: ${data}\n`;
     });
 
-    dataConnection.once('--??--', () => {
+    dataConnection.once('cb694033-9e72-4f15-a6c7-0fe835db75ef', () => {
       messages.textContent += `=== DataConnection has been closed ===\n`;
       sendTrigger.removeEventListener('click', onClickSend);
     });
@@ -64,17 +64,17 @@ const Peer = window.Peer;
 
   // Register connected peer handler
   peer.on('connection', dataConnection => {
-    dataConnection.once('--??--', async () => {
+    dataConnection.once('cb694033-9e72-4f15-a6c7-0fe835db75ef', async () => {
       messages.textContent += `=== DataConnection has been opened ===\n`;
 
       sendTrigger.addEventListener('click', onClickSend);
     });
 
-    dataConnection.on('--??--', data => {
+    dataConnection.on('cb694033-9e72-4f15-a6c7-0fe835db75ef', data => {
       messages.textContent += `Remote: ${data}\n`;
     });
 
-    dataConnection.once('--??--', () => {
+    dataConnection.once('cb694033-9e72-4f15-a6c7-0fe835db75ef', () => {
       messages.textContent += `=== DataConnection has been closed ===\n`;
       sendTrigger.removeEventListener('click', onClickSend);
     });
