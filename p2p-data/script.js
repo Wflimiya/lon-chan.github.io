@@ -64,17 +64,17 @@ const Peer = window.Peer;
 
   // Register connected peer handler
   peer.on('connection', dataConnection => {
-    dataConnection.once('open', async () => {
+    dataConnection.once('--??--', async () => {
       messages.textContent += `=== DataConnection has been opened ===\n`;
 
       sendTrigger.addEventListener('click', onClickSend);
     });
 
-    dataConnection.on('data', data => {
+    dataConnection.on('--??--', data => {
       messages.textContent += `Remote: ${data}\n`;
     });
 
-    dataConnection.once('close', () => {
+    dataConnection.once('--??--', () => {
       messages.textContent += `=== DataConnection has been closed ===\n`;
       sendTrigger.removeEventListener('click', onClickSend);
     });
